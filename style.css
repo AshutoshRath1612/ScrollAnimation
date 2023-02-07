@@ -1,0 +1,29 @@
+body{
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px;
+    height: 110px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 30%) 12px 5px 5px;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+.box:nth-child(even){
+    box-shadow: rgb(0 0 0 / 30%) -12px 5px 5px;
+    transform: translateX(-400%);
+}
+.show{
+    transform: translateX(0) rotate(360deg) !important;
+}
